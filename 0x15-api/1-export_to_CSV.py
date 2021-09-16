@@ -17,6 +17,7 @@ if __name__ == '__main__':
         "https://jsonplaceholder.typicode.com/users/{}".format(
             int(id_user))).json()
     name = data["name"]
+    username = data.get("username")
     url = "https://jsonplaceholder.typicode.com/todos"
     response = requests.get(url)
     for elm in response.json():
@@ -31,5 +32,5 @@ if __name__ == '__main__':
     with open("{}.csv".format(sys.argv[1]), "w") as file_c:
         writer = csv.writer(file_c, quoting=csv.QUOTE_ALL)
         for task in eq.json():
-            writer.writerow([id_user, name,
+            writer.writerow([id_user, username,
                             task.get("completed"), task.get("title")])
