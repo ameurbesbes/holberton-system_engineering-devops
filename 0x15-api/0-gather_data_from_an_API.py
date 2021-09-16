@@ -26,4 +26,4 @@ if __name__ == '__main__':
                 arr.append(elm['title'])
     print("Employee {} is done with tasks({}/{}):".format(name, done, total))
     for x in arr:
-        print("\t{}".format(x))
+        print("\t {}".format(x))
