@@ -4,8 +4,8 @@ gather data model
 """
 import csv
 import requests
-import sys
 import json
+import sys
 
 
 if __name__ == '__main__':
