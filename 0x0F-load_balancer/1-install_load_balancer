@@ -15,7 +15,7 @@ frontend load_balancer
     default_backend webserver
 backend webserver
     balance roundrobin
-    server [3034]-web-01 34.139.16.162:80 check
-    server [3034]-web-02 3.80.23.21:80 check
+    server 3034-web-01 34.139.16.162:80 check
+    server 3034-web-02 3.80.23.21:80 check
 " >> /etc/haproxy/haproxy.cfg
 service haproxy restart
